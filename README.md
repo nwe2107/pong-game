@@ -22,6 +22,13 @@ pip install -r requirements.txt
 python pong.py
 ```
 
+## Build a standalone executable (PyInstaller)
+- Activate your virtual env and install the builder: `pip install pyinstaller`
+- Build (macOS/Linux): `python -m PyInstaller --windowed --onefile --name PongGame pong.py`
+- Build (Windows): `pyinstaller --noconsole --onefile --name PongGame pong.py`
+- The executable lives in `dist/` (`PongGame.app` on macOS, `PongGame.exe` on Windows). Double-click it to play.
+- Build on the same OS you intend to ship for; cross-compiling is not supported out of the box.
+
 ## Controls
 - `W` / `S` to move
 - `P` to pause
